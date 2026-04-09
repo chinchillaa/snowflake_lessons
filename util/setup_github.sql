@@ -1,15 +1,13 @@
+-- https://zenn.dev/yujmatsu/articles/20251201_snowflake_gitを参考の事
 -- PATのアクセス権限についてはhttps://zenn.dev/tabirider/articles/tr-github-personal-access-tokens-permissionsを参考の事
 
-use role sysadmin;
-create or replace database util_db;
+-- create or replace database util_db; -- util_dbがなければ実行
 
 -- GitHubのアクセストークンを格納
 CREATE OR REPLACE SECRET UTIL_DB.PUBLIC.my_github_token
     TYPE = PASSWORD
     USERNAME = 'my_github_username'
     PASSWORD = 'ghp_xxxxxxxxxxxxxxxxx';
-
-GRANT USAGE ON INTEGRATION my_git_api_integration TO ROLE SYSADMIN;
 
 -- API統合を作成
 CREATE OR REPLACE API INTEGRATION my_git_api_integration
