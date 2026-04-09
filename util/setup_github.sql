@@ -1,3 +1,5 @@
+-- PATのアクセス権限についてはhttps://zenn.dev/tabirider/articles/tr-github-personal-access-tokens-permissionsを参考の事
+
 use role sysadmin;
 create or replace database util_db;
 
