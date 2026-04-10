@@ -4,4 +4,4 @@ select $1
 from @ZENAS_ATHLEISURE_DB.PRODUCTS.PRODUCT_METADATA;
 
 select $1
-from @ZENAS_ATHLEISURE_DB.PRODUCTS.PRODUCT_METADATA/product_coordination_suggestions.txt;
+from @ZENAS_ATHLEISURE_DB.PRODUCTS.PRODUCT_METADATA/swt_product_line.txt;
